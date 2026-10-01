@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country and Capital</title>
+
+    <head>
+    <title>Country and Capital</title>
+
+    <style>
+        body {
+            background-color: #e6f4ff;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #24527a;
+        }
+
+        #capital {
+            color: #1565c0;
+            font-weight: bold;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+</head>
+
+<body>
+
+    <h1>Country and Capital</h1>
+
+    <label for="country">Select a Country:</label>
+
+    <select id="country">
+        <option value="">-- Select Country --</option>
+        <option value="New Delhi">India</option>
+        <option value="Washington, D.C.">United States</option>
+        <option value="Tokyo">Japan</option>
+        <option value="Canberra">Australia</option>
+        <option value="Paris">France</option>
+    </select>
+
+    <span id="capital"></span>
+
+
+    <script>
+    const country = document.getElementById("country");
+    const capital = document.getElementById("capital");
+
+    country.addEventListener("change", function() {
+        capital.textContent = this.value;
+    });
+</script>
+
+
+</body>
+</html>
