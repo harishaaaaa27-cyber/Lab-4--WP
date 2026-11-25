@@ -1,120 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Country and Capital</title>
 
     <style>
         body {
-            background: linear-gradient(135deg, #f5edff, #fff1f6);
+            background-color: #fce4ec;
             font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 20px;
+            text-align: center;
+            padding: 50px;
         }
 
         .container {
-            background-color: white;
-            width: 600px;
-            max-width: 100%;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px #dfd1ed;
-            text-align: center;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: #f0e6ff;
-            color: #8965b5;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 1px;
+            background-color: #fff0f5;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 10px #d8b4c8;
         }
 
         h1 {
-            color: #59466f;
-            font-size: 30px;
-            margin-top: 22px;
-        }
-
-        .subtitle {
-            color: #9585a5;
-            font-size: 15px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .selection-box {
-            display: flex;
-            gap: 20px;
-            background-color: #fcf8ff;
-            padding: 25px;
-            border-radius: 18px;
-            border: 1px solid #eee2f7;
-        }
-
-        .field {
-            flex: 1;
-            text-align: left;
+            color: #ad1457;
         }
 
         label {
-            display: block;
-            color: #76618b;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 10px;
+            color: #6a1b4d;
+            font-size: 18px;
         }
 
         select {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #d9c8f0;
-            border-radius: 12px;
-            background-color: white;
-            color: #59466f;
-            font-size: 15px;
-            outline: none;
-            cursor: pointer;
-        }
-
-        select:focus {
-            border-color: #a98bd3;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #d48aaa;
+            font-size: 16px;
         }
 
         #capital {
-            background-color: #fceaf2;
-            border: 2px solid #f2d3e3;
-            color: #a45e88;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 22px;
+            display: block;
+            color: #880e4f;
             font-weight: bold;
-            min-height: 24px;
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px;
-            }
-
-            .selection-box {
-                flex-direction: column;
-            }
-
-            h1 {
-                font-size: 25px;
-            }
+            font-size: 24px;
+            margin-top: 25px;
         }
     </style>
 </head>
@@ -123,36 +52,21 @@
 
     <div class="container">
 
-        <span class="tag">LAB ASSIGNMENT</span>
+        <h1>Country and Capital</h1>
 
-        <h1>Country &amp; Capital Selector</h1>
+        <label for="country">Select a Country:</label>
+        <br>
 
-        <p class="subtitle">
-            Select a country from the dropdown to discover its capital city.
-        </p>
+        <select id="country">
+            <option value="">-- Select Country --</option>
+            <option value="New Delhi">India</option>
+            <option value="Washington, D.C.">United States</option>
+            <option value="Tokyo">Japan</option>
+            <option value="Canberra">Australia</option>
+            <option value="Paris">France</option>
+        </select>
 
-        <div class="selection-box">
-
-            <div class="field">
-                <label for="country">CHOOSE A COUNTRY:</label>
-
-                <select id="country">
-                    <option value="">-- Select Country --</option>
-                    <option value="New Delhi">India</option>
-                    <option value="Washington, D.C.">United States</option>
-                    <option value="Tokyo">Japan</option>
-                    <option value="Canberra">Australia</option>
-                    <option value="Paris">France</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label>CAPITAL CITY:</label>
-
-                <div id="capital">Select a country</div>
-            </div>
-
-        </div>
+        <span id="capital"></span>
 
     </div>
 
